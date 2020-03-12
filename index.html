@@ -1,1 +1,362 @@
-Hello World
+
+<!--
+        /*
+============================================
+; Title:  Personal Portfolio
+; Author: James Brown
+; BootStrap Cover Template by: @mdo - https://twitter.com/mdo
+                               https://getbootstrap.com/docs/4.0/examples/cover/
+; Date:   3/10/2020
+; Description: Portfolio Site for James Brown
+;===========================================
+*/
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>James Brown - Full Stack Developer</title>
+    <link rel="icon" href="_images/blacklogo.png">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Import for Font Awesome Icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="css/portfolio.css" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+      <script> document.body.classList.add('fade');</script>
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h4 class="masthead-brand"><a href="index.php">James Brown</a></h4>
+      <nav class="nav nav-masthead justify-content-center">
+        <a href="#" class="nav-link" data-toggle="modal" data-target=".bd-example-modal-lg">Skills</a>
+        <a class="nav-link disabled" id="randoclick">|</a>
+        <a href="#"class="nav-link" data-toggle="modal" data-target=".bd-example-modal-lg2">Projects</a>
+        <a class="nav-link disabled">|</a>
+        <a href="#" class="nav-link" data-toggle="modal" data-target=".bd-example-modal-lg3">Qualifications</a>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main" class="inner cover">
+    <img src="images/jblogo.png" width=40%>
+    <h2 class="cover-heading"><strong>Full Stack Web Developer</strong></h2>
+    <p class="lead">Build or Destroy</p>
+    <p class="lead">
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" data-whatever="test">Contact</button>
+    </p>
+    <!--Contact Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color:rgba(231, 231, 231, 0.877)">
+            <h5 class="modal-title modal-text" id="exampleModalLabel">Let's Brainstorm</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body modal-text">
+            <form id="contact-form" name="contact-form" action="/" method="POST">
+              <div class="form-group">
+                <label for="name" class="col-form-label" id="name" name="name">Name</label>
+                <input type="text" name="name" class="form-control" id="name">
+              </div>
+              <div class="form-group">
+                <label for="email" class="col-form-label" id="email" name="email">Email</label>
+                <input type="text" id="email" name="email" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="message" class="col-form-label">Message:</label>
+                <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button id="modalcontactclose" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a class="btn btn-success" id="status" onclick="validateForm()">Send</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+<!--End Contact Modal-->
+
+
+
+<!-- Skills modal -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content modal-background">
+
+              <!--Jumbotron-->
+      <div class="jumbotron jumbotron-fluid jumbotron-img">
+        <div class="container">
+          <button type="button" class="btn btn-secondary jumbotron-close" data-dismiss="modal">X</button>
+          <h1 class="display-4">Skills</h1>
+          <p class="lead">Eager to Learn. Always willing to Listen.</p>
+        </div>
+      </div><!--end jumbotron-->
+
+      <!--begin card 1-->
+      <div class="cardcard bg-dark text-white">
+          <h2 class="card-title">Technical</h2>
+          <div class="card-body" style="text-align: left;">
+            <!--Tech Progress Bar Begin-->
+            <h6>PHP</h6>
+          <div class="progress">
+              <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div><br>
+          <h6>HTML/CSS</h6>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div><br>
+            <h6>JS/JQUERY/JQuery Mobile</h6>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div><br>
+            <h6>REST/NVP Web Services</h6>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div><br>
+            <h6>Node/Express/React/JSX/EJS</h6>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div><br>
+            <h6>Application Debugging</h6>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div><br>
+            <h6>HTTP/TCP/IP/PROXY</h6>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div><br>
+            <!--Tech Progress Bar End-->
+          </div>
+        </div><!--End card 1-->
+
+        <!--begin card 1-->
+      <div class="cardcard bg-dark text-white">
+          <h2 class="card-title"><strong>Business</strong></h2>
+          <div class="card-body" style="text-align: left;">
+            <!--Tech Progress Bar Begin-->
+            <h5>Relationship Building</h5>
+          <div class="progress">
+              <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div><br>
+            <h5>Ecommerce (Payments & Risk in several verticals)</h5>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div><br>
+          <h5>Business Writing</h5>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div><br>
+            <h5>Project Management</h5>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div><br>
+            <h5>Portfolio Management</h5>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div><br>
+            <!--Tech Progress Bar End-->
+          </div>
+        </div><!--End card 1-->
+
+
+      <!--button to close modal-->
+      <button type="button" class="btn modal-button" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div><!--End Skills modal -->
+
+<!-- Project modal -->
+<div class="modal fade bd-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content modal-background">
+     <!--Jumbotron-->
+     <div class="jumbotron jumbotron-fluid jumbotron-img2">
+        <div class="container">
+        <button type="button" class="btn btn-secondary jumbotron-close" data-dismiss="modal">X</button>
+          <h1 class="display-4">Projects Gallery</h1>
+          <p class="lead">Never scared. Always up for a challenge.</p>
+        </div>
+      </div><!--end jumbotron-->
+      <p>Here are some projects I've recently worked on. Please download the SRC files if you'd like to learn more.</p><br>
+      <div class="cardcard bg-dark text-white mb-1">
+          <img class="card-img-top modal-card-img" src="_images/tntcabinets.jpg" alt="Card image cap">
+          <div class="card-body">
+              <h5 class="card-title" >WEB200 bioSite</h5>
+            <p class="card-text">This is a BioSite I created for my good friend, Roberto. This biosite was required as a final project for web200.</p>
+            <a href="https://therealjamesbrown.github.io/bioSite/#home" class="btn btn-success">View Site</a>
+          </div>
+        </div><br><br>
+
+          <div class="cardcard bg-dark text-white">
+              <img class="card-img-top modal-card-img" src="_images/paypal.PNG" alt="Card image cap">
+              <div class="card-body">
+                  <h5 class="card-title">WEB200 bioSite prototype</h5>
+                <p class="card-text"></p>
+                <a href="https://github.com/therealjamesbrown/bioSite/blob/master/Assignment%204.3.docx" class="btn btn-success">View Prototype</a>
+              </div>
+            </div><br><br>
+
+              <div class="cardcard bg-dark text-white">
+                  <img class="card-img-top modal-card-img" src="_images/web project.PNG" alt="Card image cap">
+                  <div class="card-body">
+                      <h5 class="card-title">WEB230/231 Repository</h5>
+                    <p class="card-text">REPO for WEB230/231. This repo has a bunch of different JS projects.</p>
+                  </div>
+                  <a href="https://github.com/therealjamesbrown/web-231" class="btn btn-success">View Repo</a>
+                <p> </p>
+                </div><br><br>
+                <div class="cardcard bg-dark text-white">
+                    <img class="card-img-top modal-card-img" src="_images/paypal.PNG" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Personal Portfolio Prototype</h5>
+                      <p class="card-text">Personal Portfolio Prototype that I created for this site.</p>
+                      <a href="https://github.com/therealjamesbrown/web-330/tree/master/week-2" class="btn btn-success">View Prototype</a>
+                    </div>
+                  </div><br><br>
+                  <div class="cardcard bg-dark text-white">
+                    <img class="card-img-top modal-card-img" src="_images/paypal.PNG" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">WEB330 Repository</h5>
+                      <p class="card-text">Repo created for WEB330 class.</p>
+                      <a href="https://github.com/therealjamesbrown/web-330" class="btn btn-success">View Repo</a>
+                    </div>
+                  </div><br><br>
+    <!--button to close modal-->
+    <button type="button" class="btn modal-button" data-dismiss="modal">Close</button>      
+    </div>
+  </div>
+</div><!--End Project Modal-->
+
+<!-- Education modal -->
+<div class="modal fade bd-example-modal-lg3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content modal-background">
+  
+          <!--Jumbotron-->
+        <div class="jumbotron jumbotron-fluid jumbotron-img3">
+          <div class="container">
+          <button type="button" class="btn btn-secondary jumbotron-close" data-dismiss="modal">X</button>
+            <h1 class="display-4">Education</h1>
+            <h5>&</h5>
+            <h1 class="display-4">Recent Roles</h1>
+          </div>
+        </div><!--end jumbotron-->
+        <!--begin card 1-->
+      <div class="cardcard bg-dark text-white">
+          <h2 class="card-title">- Associate Degree - Information Technology</h2><h4 class="card-title">Metropolitan Community College</h4>
+          <div class="card-body">
+              <ul class="list-group">
+                  <li class="list-group-item list-group-item-dark">Java Programming I & II</li>
+                  <li class="list-group-item list-group-item-dark">Networking Essentials</li>
+                  <li class="list-group-item list-group-item-dark">Web Page Creation</li>
+                  <li class="list-group-item list-group-item-dark">Photoshop</li>
+                  <li class="list-group-item list-group-item-dark">Internet Scripting</li>
+                  <li class="list-group-item list-group-item-dark">Basic WordPress</li>
+                  <li class="list-group-item list-group-item-dark">PHP Programming I & II</li>
+                  <li class="list-group-item list-group-item-dark">Intro to Database Design</li>
+                  <li class="list-group-item list-group-item-dark">Windows Operating Systems I</li>
+                  <li class="list-group-item list-group-item-dark">Linux Operating Sys I</li>
+                  <li class="list-group-item list-group-item-dark">Mobile Application Develop</li>
+                  <li class="list-group-item list-group-item-dark">Web Development Capstone</li>
+                </ul><!--End first list group-->
+          </div>
+        </div><!--End card 1-->
+
+        <!--begin card 2-->
+      <div class="cardcard bg-dark text-white">
+        <h2 class="card-title">- Bachelor Degree - Full Stack Web Development</h2><h4 class="card-title">Bellevue University (in progress)</h4>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-dark">Fundamentals of Web Development</li>
+                <li class="list-group-item list-group-item-dark">Internet Systems Architecture</li>
+                <li class="list-group-item list-group-item-dark">Enterprise JavaScript I & II</li>
+                <li class="list-group-item list-group-item-dark">Business Environment for Web</li>
+                <li class="list-group-item list-group-item-dark">Node.js</li>
+                <li class="list-group-item list-group-item-dark">RESTFul APIs</li>
+                <li class="list-group-item list-group-item-dark">Introduction to NoSQL</li>
+              </ul><!--End first list group-->
+        </div>
+      </div><!--End card 2-->
+
+        <!--begin card 3-->
+      <div class="cardcard bg-dark text-white">
+          <h2 class="card-title">Recent Roles</h2><h6>@</h6><h4 class="card-title">PayPal</h4>
+          <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-dark">Technical Support Engineer<br>
+                    January 2020 - Current
+                    </li>
+                  <li class="list-group-item list-group-item-dark">North American Mid Market Account Manager<br>
+                    January 2016 - 2020
+                    </li>
+                  <li class="list-group-item list-group-item-dark">Technical Support Engineer Intern<br>
+                  July 2018 - December 2018</li>
+                  <li class="list-group-item list-group-item-dark">Business Development Speciliast<br>
+                  March 2014 - January 2016
+                  </li>
+                  <li class="list-group-item list-group-item-dark">Protection Services Analyst<br>
+                  October 2012 - March 2014
+                  </li>
+                  <li class="list-group-item list-group-item-dark">Business Support Agent<br>
+                  July 2012 - October 2012
+                  </li>
+                </ul><!--End first list group-->
+          </div>
+        </div><!--End card 3-->
+    
+        <!--button to close modal-->
+        <button type="button" class="btn modal-button" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div><!--End Education modal -->
+  </main>
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+        <a href="https://www.instagram.com/jamesbrown_._/"><i class="fab fa-instagram"style="font-size:28px"></i></a>
+        <a href="https://www.linkedin.com/in/james-brown-a12867a2"><i class="fab fa-linkedin" style="font-size:28px"></i></a>
+        <a href="https://github.com/therealjamesbrown"><i class="fab fa-github-square" style="font-size:28px"></i></a>
+        <p>Copyright @ James Brown 2020</p>
+    </div>
+  </footer>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    //Script to remove fade on page load
+    document.addEventListener("DOMContentLoaded", function(e) {
+      document.body.classList.remove('fade');
+    });
+  </script>
+</body>
+</html>
