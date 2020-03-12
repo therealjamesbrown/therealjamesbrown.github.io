@@ -143,18 +143,28 @@ jumbotrong in skills modal
   transition: 1.0s opacity;
 }
 
+.projectsCardImage{
+  background-size: auto;
+  background-position: center center;
+  background-repeat: no;
+  width: 100%; 
+height: 100%;
+}
+
 
 /*
 jumbotrong in projects modal
 */
 .jumbotron-img2{
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-  background-image: url("../_images/contact.JPG");
+  background-image: url("../images/IMG_8921.JPG");
   background-size: cover;
   background-position: center center;
   background-repeat: no;
   opacity: 1;
   transition: 1.0s opacity;
+  width: 100%; 
+height: 100%;
 }
 
 
